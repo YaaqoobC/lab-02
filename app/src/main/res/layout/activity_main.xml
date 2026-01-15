@@ -26,19 +26,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <Button
                 android:id="@+id/add_city_btn"
-                android:layout_width="190dp"
+                android:layout_width="191dp"
                 android:layout_height="wrap_content"
-                android:text="Add City" />
+                android:layout_marginEnd="5dp"
+                android:text="Add City"
+                app:cornerRadius="10dp" />
 
             <Button
                 android:id="@+id/del_city_btn"
-                android:layout_width="220dp"
+                android:layout_width="176dp"
                 android:layout_height="wrap_content"
-                android:text="Delete City" />
+                android:layout_marginStart="5dp"
+                android:text="Delete City"
+                app:cornerRadius="10dp" />
         </LinearLayout>
 
         <ListView
@@ -48,10 +53,10 @@
             android:background="@android:color/system_accent1_10" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/confirm_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="invisible"
-            android:id="@+id/confirm_layout">
+            android:visibility="invisible">
 
             <EditText
                 android:id="@+id/add_city_text_box"
@@ -67,6 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Confirm"
+                app:cornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/add_city_text_box"
